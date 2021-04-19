@@ -1,0 +1,49 @@
+.heart {
+    background-color: #fa6d5b;
+    display: inline-block;
+    height: 100px;
+    margin: 10% 40%;
+    position: relative;
+    top: 0;
+    transform: rotate(-45deg);
+    width: 100px;
+    animation-name: animate;
+    animation-delay: 1s;
+    animation-duration: 1.5s;
+    animation-iteration-count: 2;
+  }
+  
+  .heart:before,
+  .heart:after {
+    content: "";
+    background-color: #fa6d5b;
+    border-radius: 50%;
+    height: 100px;
+    position: absolute;
+    width: 100px;
+  }
+  
+  .heart:before {
+    top: -50px;
+    left: 0;
+  }
+  
+  .heart:after {
+    left: 50px;
+    top: 0;
+  }
+
+  @keyframes animate{
+    0%{
+        transform: scale(0.7) rotate(-45deg);
+    }  
+    25%{
+        transform: scale(1) rotate(-45deg);
+    }
+    50%{
+        transform: scale(1.2) rotate(-45deg);
+    }  
+    75%{
+        transform: scale(1.4) rotate(-45deg);
+    }
+  }

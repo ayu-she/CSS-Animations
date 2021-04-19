@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #0bbdfa;
+}
+.traffic-lights {
+    padding: 10px 50px;
+    background: #3a3a3a;
+    border-radius: 35px;
+    border: 15px solid white;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    z-index:100;
+  }
+  
+  .light {
+    border-top: 0.8em solid black;
+    border-radius: 50%;
+    background: teal;
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+  }
+  
+  .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 30px 0px 0px 30px
+  }
+
+  .red {
+    animation: red 10s linear infinite;
+  }
+  
+  .amber {
+    animation: amber 10s linear infinite;
+  }
+  
+  .green {
+    animation: green 10s linear infinite;
+  }
+  
+  @keyframes red {
+    0% {
+      background: #111;
+    }
+    2%,
+    30% {
+      background: #f94340;
+    }
+    30%,
+    100% {
+      background: #111;
+    }
+  }
+  
+  @keyframes amber {
+    0%,
+    30% {
+      background: #111;
+    }
+    32%,
+    60% {
+      background: #fc853f;
+    }
+    60%,
+    100% {
+      background: #111;
+    }
+  }
+  
+  @keyframes green {
+    0%,
+    60% {
+      background: #111;
+    }
+    62%,
+    90% {
+      background: #3ffc46;
+    }
+    90%,
+    100% {
+      background: #111;
+    }
+  }
+
+  .traffic-lights::before {
+    content: "";
+    width: 5em;
+    height: 10em;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background:linear-gradient(white,#0bbdfa);
+    z-index: 0;
+  }
